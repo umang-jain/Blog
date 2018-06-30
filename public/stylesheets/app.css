@@ -1,0 +1,24 @@
+i.icon{
+  font-size: 2em;  
+}
+.main.container{
+    margin-top:7em;
+}
+body{
+    background:url("https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    
+    background-position: center;
+
+}
+body, html{
+    height: 100%;
+}
+#show{
+    display:flex;
+    margin-top: 10px;
+}
+.indeximg{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
