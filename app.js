@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(expresssanitizer());
 app.use(methodoverride("_method"));
-mongoose.connect("mongodb://admin:admin123@ds121726.mlab.com:21726/blog-ed || mongodb://localhost/blog");
+mongoose.connect("mongodb://admin:admin123@ds121726.mlab.com:21726/blog-ed");
 var blogSchema = new mongoose.Schema({
     title:String,
     image:String,

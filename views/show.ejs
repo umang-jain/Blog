@@ -6,7 +6,7 @@
         <div class="item">
             <img class="ui centered rounded image" src="<%= blog.image%>" alt="<%= blog.title%>">
             <div class="content">
-                <span><%= blog.created.toDateString()%></span>
+                <span><strong><%= blog.created.toDateString()%></strong></span>
             </div>
             <div class="description">
                 <p><%- blog.body%></p>
@@ -20,6 +20,6 @@
             <button class="ui basic button red">Delete</button>
         </form>
     </div>
-</div>    
-    
+</div>
+
 <% include ./partials/footer %>
