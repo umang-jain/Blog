@@ -5,12 +5,14 @@ var express         = require("express"),
     methodoverride  = require("method-override"),
     expresssanitizer= require("express-sanitizer");
 
+var PORT = process.env.PORT || 3000;
+
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(expresssanitizer());
 app.use(methodoverride("_method"));
-mongoose.connect("mongodb://localhost/blog");
+mongoose.connect("mongodb://admin:admin123@ds121726.mlab.com:21726/blog-ed || mongodb://localhost/blog");
 var blogSchema = new mongoose.Schema({
     title:String,
     image:String,
@@ -40,12 +42,12 @@ app.post("/blogs",function(req,res){
            res.render("new");
        }else{
            res.redirect("/blogs");
-       } 
+       }
     });
 });
 
 app.get("/blogs/new",function(req,res){
-   res.render("new"); 
+   res.render("new");
 });
 
 app.get("/blogs/:id",function(req,res){
@@ -64,7 +66,7 @@ app.get("/blogs/:id/edit",function(req,res){
         }else{
             res.render("edit",{blog:foundblog});
         }
-    });    
+    });
 });
 app.put("/blogs/:id",function(req,res){
     req.body.blog.body=req.sanitize(req.body.blog.body);
@@ -83,9 +85,9 @@ app.delete("/blogs/:id",function(req,res){
        }else{
            res.redirect("/blogs");
        }
-   }) 
+   })
 });
 
-app.listen("3000",function(req,res){
-   console.log("Starting Server on port 3000!!"); 
+app.listen(PORT,function(req,res){
+   console.log(`Starting Server on port : ${PORT} !!`);
 });

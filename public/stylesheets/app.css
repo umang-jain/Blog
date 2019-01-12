@@ -1,12 +1,12 @@
 i.icon{
-  font-size: 2em;  
+  font-size: 2em;
 }
 .main.container{
     margin-top:7em;
 }
 body{
     background:url("https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    
+
     background-position: center;
 
 }
