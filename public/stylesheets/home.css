@@ -6,7 +6,7 @@ body{
     background-attachment: fixed;
 }
 i.icon{
-    font-size: 2em;  
+    font-size: 2em;
 }
 .main.container{
     margin-top:7em;
@@ -17,4 +17,12 @@ i.icon{
     color:floralwhite;
     font-size: 50px;
     line-height: 70px;
+}
+.created{
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
